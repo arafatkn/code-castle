@@ -3,9 +3,10 @@
 /**
  * Plugin Name: WP Dens
  * Plugin URI: http://wordpress.org/plugins/wp-dens/
- * Description: Appsero
- * Version: 1.0
+ * Description: A wide collection of small tools for making wp developer and administrators life easier.
+ * Version: 0.1
  * Author: Arafat Islam
+ * Author URI: https://arafatkn.com
  * Text Domain: wp-dens
  */
 

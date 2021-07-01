@@ -10,6 +10,7 @@ class ComposerStaticInitdcf2428a6bfebe0468a03d209bbf21b7
         'A' => 
         array (
             'Arafatkn\\WpDens\\Pages\\' => 22,
+            'Appsero\\' => 8,
         ),
     );
 
@@ -17,6 +18,10 @@ class ComposerStaticInitdcf2428a6bfebe0468a03d209bbf21b7
         'Arafatkn\\WpDens\\Pages\\' => 
         array (
             0 => __DIR__ . '/../..' . '/pages',
+        ),
+        'Appsero\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/appsero/client/src',
         ),
     );
 

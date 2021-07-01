@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Arafatkn\\WpDens\\Pages\\' => array($baseDir . '/pages'),
+    'Appsero\\' => array($vendorDir . '/appsero/client/src'),
 );

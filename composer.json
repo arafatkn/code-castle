@@ -8,5 +8,8 @@
     "psr-4": {
       "Arafatkn\\WpDens\\Pages\\": "pages"
     }
+  },
+  "require": {
+    "appsero/client": "dev-develop"
   }
 }
