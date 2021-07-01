@@ -1,0 +1,12 @@
+{
+  "name": "arafatkn/wp-dens",
+  "description": "The best plugin with a wide collection of small tools for wordpress.\n\n",
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0-or-later",
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Arafatkn\\WpDens\\Pages\\": "pages"
+    }
+  }
+}

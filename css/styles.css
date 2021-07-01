@@ -1,0 +1,29 @@
+.wp-dens-info-container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 50px;
+}
+@media only screen and (max-width: 1200px) {
+    .wp-dens-info-container {
+        grid-template-columns: auto auto;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .wp-dens-info-container {
+        grid-template-columns: auto;
+    }
+}
+.wp-dens-info-table {
+    border: 1px solid #9999cc;
+}
+.wp-dens-info-table td {
+    margin: 0px;
+    padding: 8px 15px 8px 8px;
+}
+.wp-dens-info-table tr:nth-child(odd) {
+    background: #cccccc;
+}
+.wp-dens-info-table td:nth-child(1) {
+    font-weight: bold;
+    background: #aaaaaa;
+}
