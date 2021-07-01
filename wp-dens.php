@@ -17,7 +17,7 @@ namespace Arafatkn;
 if( !defined( 'ABSPATH' ) )
     exit;
 
-include 'vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 
 class WpDens
@@ -93,6 +93,30 @@ class WpDens
         new \Arafatkn\WpDens\Pages\Index();
     }
 }
+
+
+/**
+ * Initialize the plugin tracker
+ *
+ * @return void
+ */
+function appsero_init_tracker_wp_dens() {
+
+    if ( ! class_exists( 'Appsero\Client' ) ) {
+        require_once __DIR__ . '/appsero/src/Client.php';
+    }
+
+    $client = new Appsero\Client( 'c37d3fac-6864-4d9c-b9f3-24b851c12c68', 'WP Dens', __FILE__ );
+
+    // Active insights
+    $client->insights()->init();
+
+    // Active automatic updater
+    $client->updater();
+
+}
+
+appsero_init_tracker_wp_dens();
 
 
 WpDens::instance();

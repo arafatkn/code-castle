@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '91f06832ea68682b4ccad8a7f795c4b6c42d958e',
+    'reference' => '096597bac46f4afa57fd3a60d049497cede907d5',
     'name' => 'arafatkn/wp-dens',
   ),
   'versions' => 
@@ -52,7 +52,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '91f06832ea68682b4ccad8a7f795c4b6c42d958e',
+      'reference' => '096597bac46f4afa57fd3a60d049497cede907d5',
     ),
   ),
 );
