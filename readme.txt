@@ -1,7 +1,7 @@
-=== WP Dens ===
+=== Code Castle ===
 Contributors: arafatkn
 Donate link: https://arafatkn.com/donate/
-Tags: wp tools, small tools
+Tags: wp tools, small tools, code snippets
 Requires at least: 4.0
 Tested up to: 5.7.2
 Stable tag: 0.1
@@ -40,8 +40,9 @@ You can also download the plugin and upload in the "Add Plugin" section in your 
 = v0.1 - (1st July, 2021) =
 - **New:** Initial release.
 
+
 ## Privacy Policy
-WP Dens uses [Appsero](https://appsero.com) SDK to collect some telemetry data upon user's confirmation. This helps us to troubleshoot problems faster & make product improvements.
+Code Castle uses [Appsero](https://appsero.com) SDK to collect some telemetry data upon user's confirmation. This helps us to troubleshoot problems faster & make product improvements.
 
 Appsero SDK **does not gather any data by default.** The SDK only starts gathering basic telemetry data **when a user allows it via the admin notice**. We collect the data to ensure a great user experience for all our users.
 

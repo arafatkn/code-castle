@@ -12,10 +12,10 @@ class Index
     public function admin_menu()
     {
         add_management_page(
-            __( 'WP Dens', 'wp-dens' ),
-            'WP Dens',
+            'Code Castle',
+            'Code Castle',
             'manage_options',
-            'wp-dens',
+            'code-castle',
             [ $this, 'showPage' ],
             3
         );
@@ -45,9 +45,9 @@ class Index
             <h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
             <!-- Here are our tabs -->
             <nav class="nav-tab-wrapper">
-                <a href="?page=wp-dens" class="nav-tab <?php if($tab===null):?>nav-tab-active<?php endif; ?>">Overview</a>
+                <a href="?page=code-castle" class="nav-tab <?php if($tab===null):?>nav-tab-active<?php endif; ?>">Overview</a>
                 <?php foreach ($tabs as $key => $name): ?>
-                <a href="?page=wp-dens&tab=<?=$key?>" class="nav-tab <?php if($tab===$key):?>nav-tab-active<?php endif; ?>"><?=$name?></a>
+                <a href="?page=code-castle&tab=<?=$key?>" class="nav-tab <?php if($tab===$key):?>nav-tab-active<?php endif; ?>"><?=$name?></a>
                 <?php endforeach; ?>
             </nav>
 

@@ -1,13 +1,13 @@
 <?php
 
 /**
- * Plugin Name: WP Dens
- * Plugin URI: http://wordpress.org/plugins/wp-dens/
+ * Plugin Name: Code Castle
+ * Plugin URI: http://wordpress.org/plugins/code-castle/
  * Description: A wide collection of small tools for making wp developer and administrators life easier.
  * Version: 0.1
  * Author: Arafat Islam
  * Author URI: https://arafatkn.com
- * Text Domain: wp-dens
+ * Text Domain: code-castle
  */
 
 namespace Arafatkn;
@@ -42,6 +42,8 @@ class WpDens
         add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
 
         $this->loadPages();
+
+        $this->appsero_init_tracker_code_castle();
     }
 
 
@@ -92,31 +94,30 @@ class WpDens
         // Add settings page for set API key
         new \Arafatkn\WpDens\Pages\Index();
     }
-}
 
 
-/**
- * Initialize the plugin tracker
- *
- * @return void
- */
-function appsero_init_tracker_wp_dens() {
+    /**
+     * Initialize the plugin tracker
+     *
+     * @return void
+     */
+    private function appsero_init_tracker_code_castle() {
 
-    if ( ! class_exists( 'Appsero\Client' ) ) {
-        require_once __DIR__ . '/appsero/src/Client.php';
+        if ( ! class_exists( '\Appsero\Client' ) ) {
+            require_once __DIR__ . '/appsero/src/Client.php';
+        }
+
+        $client = new \Appsero\Client( 'c70fce4c-9bb8-4eea-92bb-38bda7c1bb1a', 'Code Castle', __FILE__ );
+
+        // Active insights
+        $client->insights()->init();
+
+        // Active automatic updater
+        $client->updater();
+
     }
 
-    $client = new Appsero\Client( 'c37d3fac-6864-4d9c-b9f3-24b851c12c68', 'WP Dens', __FILE__ );
-
-    // Active insights
-    $client->insights()->init();
-
-    // Active automatic updater
-    $client->updater();
-
 }
-
-appsero_init_tracker_wp_dens();
 
 
 WpDens::instance();
