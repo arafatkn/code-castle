@@ -12,8 +12,8 @@ class Index
     public function admin_menu()
     {
         add_management_page(
-            'Code Castle',
-            'Code Castle',
+            __('Code Castle', 'code-castle'),
+            __('Code Castle', 'code-castle'),
             'manage_options',
             'code-castle',
             [ $this, 'showPage' ],
@@ -30,12 +30,12 @@ class Index
 
         //Get the active tab from the $_GET param
         $default_tab = null;
-        $tab = isset($_GET['tab']) ? $_GET['tab'] : $default_tab;
+        $tab = isset($_GET['tab']) ? sanitize_text_field($_GET['tab']) : $default_tab;
 
         $tabs = [
-                'phpinfo' => 'PHP Info',
-                'dbinfo' => 'DB Info',
-                'more' => 'More',
+                'phpinfo' => __('PHP Info', 'code-castle'),
+                'dbinfo' => __('DB Info', 'code-castle'),
+                'more' => __('More', 'code-castle'),
         ];
 
         ?>
@@ -47,15 +47,12 @@ class Index
             <nav class="nav-tab-wrapper">
                 <a href="?page=code-castle" class="nav-tab <?php if($tab===null):?>nav-tab-active<?php endif; ?>">Overview</a>
                 <?php foreach ($tabs as $key => $name): ?>
-                <a href="?page=code-castle&tab=<?=$key?>" class="nav-tab <?php if($tab===$key):?>nav-tab-active<?php endif; ?>"><?=$name?></a>
+                <a href="?page=code-castle&tab=<?php echo $key; ?>" class="nav-tab <?php if($tab===$key):?>nav-tab-active<?php endif; ?>"><?php echo $name; ?></a>
                 <?php endforeach; ?>
             </nav>
 
             <div class="tab-content" style="padding: 10px">
                 <?php switch($tab) :
-                    case 'settings':
-                        echo 'Settings';
-                        break;
                     case 'phpinfo':
                         ( new PhpInfo() )->show();
                         break;
