@@ -25,19 +25,16 @@ class PhpInfo
             img {float: right; border: 0;}
             hr {width: 934px; background-color: #ccc; border: 0; height: 1px;}
         </style>
-        <div style="border: 1px solid #cef; margin: 10px 0px; padding: 10px 0px;" id="wp-dens-phpinfo">
+        <div style="border: 1px solid #cef; margin: 10px 0; padding: 10px 0;" id="wp-dens-phpinfo">
             <?php
             ob_start();
             phpinfo();
             $info = ob_get_contents();
             ob_end_clean();
             $info = strstr( strstr( $info, '<body>' ), '</body>', true );
-            echo substr( $info, 6 );
+            echo wp_kses_post( substr( $info, 6 ) );
             ?>
         </div>
-        <script>
-            let phpinfo = document.getElementById('wp-dens-phpinfo');
-        </script>
         <?php
     }
 }

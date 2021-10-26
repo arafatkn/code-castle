@@ -18,39 +18,39 @@ class Information
             <table class="wp-dens-info-table">
                 <tr>
                     <td>WP Version</td>
-                    <td><?=get_bloginfo( 'version' )?></td>
+                    <td><?php echo get_bloginfo( 'version' ); ?></td>
                 </tr>
                 <tr>
                     <td>Language</td>
-                    <td><?=get_locale()?></td>
+                    <td><?php echo get_locale(); ?></td>
                 </tr>
                 <tr>
                     <td>Multisite</td>
-                    <td><?=is_multisite() ? 'Yes' : 'No'?></td>
+                    <td><?php echo is_multisite() ? 'Yes' : 'No'; ?></td>
                 </tr>
                 <tr>
                     <td>Debug Mode</td>
-                    <td><?=( defined('WP_DEBUG') && WP_DEBUG ) ? 'On' : 'Off'?></td>
+                    <td><?php echo ( defined('WP_DEBUG') && WP_DEBUG ) ? 'On' : 'Off'; ?></td>
                 </tr>
                 <tr>
                     <td>Theme Name</td>
-                    <td><?=$theme->get( 'Name' )?></td>
+                    <td><?php echo $theme->get( 'Name' ); ?></td>
                 </tr>
                 <tr>
                     <td>Theme Slug</td>
-                    <td><?=get_stylesheet()?></td>
+                    <td><?php echo get_stylesheet(); ?></td>
                 </tr>
                 <tr>
                     <td>Theme Version</td>
-                    <td><?=$theme->get( 'Version' )?></td>
+                    <td><?php echo $theme->get( 'Version' ); ?></td>
                 </tr>
                 <tr>
                     <td>Theme Author</td>
-                    <td><?=$theme->get( 'Name' )?></td>
+                    <td><?php echo $theme->get( 'Name' ); ?></td>
                 </tr>
                 <tr>
                     <td>Theme Url</td>
-                    <td><?=$theme->get( 'ThemeURI' )?></td>
+                    <td><?php echo $theme->get( 'ThemeURI' ); ?></td>
                 </tr>
             </table>
         </div>
@@ -60,39 +60,39 @@ class Information
             <table class="wp-dens-info-table">
                 <tr>
                     <td>Server Software</td>
-                    <td><?=$_SERVER['SERVER_SOFTWARE']?></td>
+                    <td><?php echo $_SERVER['SERVER_SOFTWARE']; ?></td>
                 </tr>
                 <tr>
                     <td>Server Protocol</td>
-                    <td><?=$_SERVER["SERVER_PROTOCOL"]?></td>
+                    <td><?php echo $_SERVER["SERVER_PROTOCOL"]; ?></td>
                 </tr>
                 <tr>
                     <td>PHP Version</td>
-                    <td><?=phpversion()?></td>
+                    <td><?php echo phpversion(); ?></td>
                 </tr>
                 <tr>
                     <td>Max File Upload Size</td>
-                    <td><?=size_format( wp_max_upload_size() )?></td>
+                    <td><?php echo size_format( wp_max_upload_size() ); ?></td>
                 </tr>
                 <tr>
                     <td>Memory Limit</td>
-                    <td><?=WP_MEMORY_LIMIT?></td>
+                    <td><?php echo WP_MEMORY_LIMIT; ?></td>
                 </tr>
                 <tr>
                     <td>Max Execution Time</td>
-                    <td><?=ini_get('max_execution_time')?> seconds</td>
+                    <td><?php echo ini_get('max_execution_time'); ?> seconds</td>
                 </tr>
                 <tr>
                     <td>Server Timezone</td>
-                    <td><?=date_default_timezone_get()?></td>
+                    <td><?php echo date_default_timezone_get(); ?></td>
                 </tr>
                 <tr>
                     <td>Server Time</td>
-                    <td><?=date('Y-m-d H:i:s A')?> <?=date_default_timezone_get()?></td>
+                    <td><?php echo date('Y-m-d H:i:s A'); ?> <?php echo date_default_timezone_get(); ?></td>
                 </tr>
                 <tr>
                     <td>PHP CURL</td>
-                    <td><?=function_exists( 'curl_init' ) ? 'Yes' : 'No'?></td>
+                    <td><?php echo function_exists( 'curl_init' ) ? 'Yes' : 'No'; ?></td>
                 </tr>
             </table>
         </div>
@@ -102,35 +102,35 @@ class Information
             <table class="wp-dens-info-table">
                 <tr>
                     <td>DB Extension</td>
-                    <td><?=$wpdb->use_mysqli ? 'mysqli' : 'mysql' ?></td>
+                    <td><?php echo $wpdb->use_mysqli ? 'mysqli' : 'mysql' ; ?></td>
                 </tr>
                 <tr>
                     <td>DB Version</td>
-                    <td><?=$wpdb->db_version()?></td>
+                    <td><?php echo $wpdb->db_version(); ?></td>
                 </tr>
                 <tr>
                     <td>Table Prefix</td>
-                    <td><?=$wpdb->base_prefix?></td>
+                    <td><?php echo $wpdb->base_prefix; ?></td>
                 </tr>
                 <tr>
                     <td>DB Charset</td>
-                    <td><?=$wpdb->charset?></td>
+                    <td><?php echo $wpdb->charset; ?></td>
                 </tr>
                 <tr>
                     <td>DB Collate</td>
-                    <td><?=$wpdb->collate?></td>
+                    <td><?php echo $wpdb->collate; ?></td>
                 </tr>
                 <tr>
                     <td>DB Host</td>
-                    <td><?=DB_HOST?></td>
+                    <td><?php echo DB_HOST; ?></td>
                 </tr>
                 <tr>
                     <td>DB Name</td>
-                    <td><?=DB_NAME?></td>
+                    <td><?php echo DB_NAME; ?></td>
                 </tr>
                 <tr>
                     <td>DB User</td>
-                    <td><?=DB_USER?></td>
+                    <td><?php echo DB_USER; ?></td>
                 </tr>
             </table>
         </div>

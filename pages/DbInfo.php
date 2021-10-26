@@ -22,7 +22,7 @@ class DbInfo
 
         usort($tables, function ($a, $b) {
             return $a['name'] > $b['name'];
-        });
+        }); 
         ?>
 
         <div class="wp-dens-info-container">
@@ -32,8 +32,8 @@ class DbInfo
                 <table class="wp-dens-info-table">
                     <?php foreach ($tables as $table): ?>
                     <tr>
-                        <td><?=$table['name']?></td>
-                        <td><?=$table['rows']?> rows</td>
+                        <td><?php echo $table['name']; ?></td>
+                        <td><?php echo $table['rows']; ?> rows</td>
                     </tr>
                     <?php endforeach; ?>
                 </table>
