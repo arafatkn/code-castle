@@ -4,7 +4,7 @@
  * Plugin Name: Code Castle
  * Plugin URI: http://wordpress.org/plugins/code-castle/
  * Description: A wide collection of small tools for making wp developer and administrators life easier.
- * Version: 0.1
+ * Version: 0.0.1
  * Author: Arafat Islam
  * Author URI: https://arafatkn.com
  * Text Domain: code-castle
@@ -27,7 +27,7 @@ class WpDens
      *
      * @var string
      */
-    public $version = '0.1';
+    public $version = '0.0.1';
 
     /**
      * The single instance of the class.
