@@ -4,7 +4,7 @@
  * Plugin Name: Code Castle
  * Plugin URI: http://wordpress.org/plugins/code-castle/
  * Description: A wide collection of small tools for making wp developer and administrators life easier.
- * Version: 0.0.4
+ * Version: 0.0.5
  * Author: Arafat Islam
  * Author URI: https://arafatkn.com
  * Text Domain: code-castle
